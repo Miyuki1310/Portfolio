@@ -6,7 +6,7 @@ import { aboutTitle } from '@/data/About'
 const AboutSection = () => {
   return (
     <section id='about' className='bg-contaner text-white '>
-        <BentoGrid className=''>
+        <BentoGrid className='text-white'>
             {
                 aboutTitle.map((item, index) => (
                     <BentoGridItem
@@ -14,6 +14,7 @@ const AboutSection = () => {
                         title={item.title}
                         description={item.description}
                         className={item.className}
+                        img={item.img}
                     />
                 ))
             }
