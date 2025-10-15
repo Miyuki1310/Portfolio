@@ -11,7 +11,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "mx-auto grid max-w-7xl grid-cols-1 gap-8 md:auto-rows-[15rem] md:grid-cols-12",
+        "mx-auto grid max-w-7xl grid-cols-1 gap-[30px] md:auto-rows-[15rem] md:grid-cols-12",
         className,
       )}
     >
@@ -25,6 +25,7 @@ export const BentoGridItem = ({
   title,
   description,
   header,
+  contentClassName,
   img,
   squareImg,
   icon,
@@ -33,6 +34,7 @@ export const BentoGridItem = ({
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   header?: React.ReactNode;
+  contentClassName?: string;
   img?: string;
   squareImg?: string;
   icon?: React.ReactNode;
@@ -40,7 +42,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "group/bento relative shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-3xl bg-[#0C0E23] p-4 transition duration-200 hover:shadow-lg dark:bg-black dark:shadow-none",
+        "group/bento relative shadow-input row-span-1 flex flex-col justify-end space-y-4 rounded-3xl bg-[#0C0E23] px-4 py-10 transition duration-200 hover:shadow-lg dark:bg-black dark:shadow-none",
         className,
       )}
     >
@@ -55,9 +57,9 @@ export const BentoGridItem = ({
         </div>
       )}
       {header}
-      <div className="mt-auto transition duration-200 group-hover/bento:translate-x-2 z-10">
+      <div className="transition duration-200 group-hover/bento:translate-x-2 z-10">
         {icon}
-        <div className="mt-2 mb-2 font-sans font-bold text-white">
+        <div className={cn("mt-2 mb-2 leading-[120%] font-sans font-bold text-white", contentClassName)}>
           {title}
         </div>
         <div className="font-sans text-xs font-normal text-white">

@@ -2,6 +2,7 @@ import React from 'react'
 import { BentoGrid, BentoGridItem } from '../ui/bento-grid'
 import { title } from 'process'
 import { aboutTitle } from '@/data/About'
+import { SubAbout } from '@/data/SubAbout'
 
 const AboutSection = () => {
   return (
@@ -14,10 +15,22 @@ const AboutSection = () => {
                         title={item.title}
                         description={item.description}
                         className={item.className}
+                        contentClassName={item.contentClassName}
                         img={item.img}
                     />
                 ))
             }
+        </BentoGrid>
+        <BentoGrid className='mt-10 md:auto-rows-[12rem] text-white'>
+            {SubAbout.map((item) => (
+                <BentoGridItem
+                    key={item.id}
+                    title={item.title}
+                    className={item.className}
+                    contentClassName={item.contentClassName}
+                    img={item.img}
+                />
+            ))}
         </BentoGrid>
     </section>
   )
