@@ -12,6 +12,7 @@ const AboutSection = () => {
                 aboutTitle.map((item, index) => (
                     <BentoGridItem
                         key={item.id}
+                        id={item.id}
                         title={item.title}
                         description={item.description}
                         className={item.className}
@@ -25,10 +26,11 @@ const AboutSection = () => {
             {SubAbout.map((item) => (
                 <BentoGridItem
                     key={item.id}
+                    id = {item.id}
                     title={item.title}
                     className={item.className}
+                    squareImg={item.squareImg}
                     contentClassName={item.contentClassName}
-                    img={item.img}
                 />
             ))}
         </BentoGrid>

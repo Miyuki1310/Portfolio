@@ -1,25 +1,23 @@
-import { desc, img } from "framer-motion/client";
 
 export const aboutTitle = [
     {
         title: "I prioritize client collaboration, fostering open communication ",
-        className: "md:col-span-7 row-span-2",
-        contentClassName: "max-w-[55.66%] text-3xl",
+        className: "row-span-4 md:col-span-7 md:row-span-2 px-0",
+        contentClassName: "max-w-[60%] text-3xl mt-auto",
         img: "/about1.svg",
-        description: "and transparency to ensure project success.",
         id: 1,
     },
     {
         title: "I’m very flexible with time zone communications",
-        className: "md:col-span-5 row-span-1 px-0 justify-start",
-        contentClassName: "md:text-[30px] md:max-w-[82%] ml-4",
-        img: "/about2.svg",
+        className: "md:col-span-5 row-span-1 px-0 justify-start p-0",
+        contentClassName: "md:text-[30px]",
         id: 2,
     },
     {
         title: "My tech stack",
         className: "md:col-span-5 row-span-1 justify-center",
-        contentClassName: "md:text-3xl md:max-w-[82%] ml-4",
+        contentClassName: "md:text-3xl md:max-w-[82%]",
+        description: "I constantly try to improve",
         img: "/about1.svg",
         id: 3,
     },
